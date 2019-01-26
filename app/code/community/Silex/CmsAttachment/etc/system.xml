@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <sales_email>
+            <groups>
+                <order>
+                    <fields>
+                        <cms_pages_attached translate="label">
+                            <label>CMS pages to attach</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>100</sort_order>
+                            <source_model>adminhtml/system_config_source_cms_page</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cms_pages_attached>
+                    </fields>
+                </order>
+                <order_comment>
+                    <fields>
+                        <cms_pages_attached translate="label">
+                            <label>CMS pages to attach</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>100</sort_order>
+                            <source_model>adminhtml/system_config_source_cms_page</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cms_pages_attached>
+                    </fields>
+                </order_comment>
+                <invoice>
+                    <fields>
+                        <cms_pages_attached translate="label">
+                            <label>CMS pages to attach</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>100</sort_order>
+                            <source_model>adminhtml/system_config_source_cms_page</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cms_pages_attached>
+                    </fields>
+                </invoice>
+                <invoice_comment>
+                    <fields>
+                        <cms_pages_attached translate="label">
+                            <label>CMS pages to attach</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>100</sort_order>
+                            <source_model>adminhtml/system_config_source_cms_page</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cms_pages_attached>
+                    </fields>
+                </invoice_comment>
+                <shipment>
+                    <fields>
+                        <cms_pages_attached translate="label">
+                            <label>CMS pages to attach</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>100</sort_order>
+                            <source_model>adminhtml/system_config_source_cms_page</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cms_pages_attached>
+                    </fields>
+                </shipment>
+                <shipment_comment>
+                    <fields>
+                        <cms_pages_attached translate="label">
+                            <label>CMS pages to attach</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>100</sort_order>
+                            <source_model>adminhtml/system_config_source_cms_page</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cms_pages_attached>
+                    </fields>
+                </shipment_comment>
+                <creditmemo>
+                    <fields>
+                        <cms_pages_attached translate="label">
+                            <label>CMS pages to attach</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>100</sort_order>
+                            <source_model>adminhtml/system_config_source_cms_page</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cms_pages_attached>
+                    </fields>
+                </creditmemo>
+                <creditmemo_comment>
+                    <fields>
+                        <cms_pages_attached translate="label">
+                            <label>CMS pages to attach</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>100</sort_order>
+                            <source_model>adminhtml/system_config_source_cms_page</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cms_pages_attached>
+                    </fields>
+                </creditmemo_comment>
+            </groups>
+        </sales_email>
+    </sections>
+</config>

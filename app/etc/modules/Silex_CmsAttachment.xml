@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Silex_CmsAttachment>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Silex_CmsAttachment>
+    </modules>
+</config>

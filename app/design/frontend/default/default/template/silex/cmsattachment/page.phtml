@@ -1,0 +1,18 @@
+<?php
+/** @var Silex_CmsAttachment_Block_Page $this */
+?>
+<?php
+/**
+ * Template for CMS pages on print views
+ */
+?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+<head>
+    <title><?php echo trim($this->getPageTitle()) ?></title>
+</head>
+<body>
+    <h1><?php echo $this->getPageHeading() ?></h1>
+    <div><?php echo $this->getPageContent() ?></div>
+</body>
+</html>
