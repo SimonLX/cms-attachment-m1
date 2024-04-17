@@ -1,6 +1,6 @@
 {
     "name": "simonlx/cms-attachment-m1",
-    "description": "OrganicInternet_SimpleConfigurableProducts extensions for custom options",
+    "description": "Allow the attachment of specific CMS pages to transactionnal mails.",
     "type": "magento-module",
     "license": "GPL-3.0",
     "version": "2.3.0",
