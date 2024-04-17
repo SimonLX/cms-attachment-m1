@@ -1,15 +1,19 @@
 <config>
     <modules>
         <Silex_CmsAttachment>
-            <version>1.0.0</version>
+            <version>1.3.0</version>
         </Silex_CmsAttachment>
     </modules>
-
     <global>
         <blocks>
             <silex_cmsattachment>
                 <class>Silex_CmsAttachment_Block</class>
             </silex_cmsattachment>
+            <adminhtml>
+                <rewrite>
+                    <cms_page_edit>Silex_CmsAttachment_Block_Adminhtml_Cms_Page_Edit</cms_page_edit>
+                </rewrite>
+            </adminhtml>
         </blocks>
         <helpers>
             <silex_cmsattachment>
@@ -38,17 +42,16 @@
                     </silex_cmsattachment>
                 </observers>
             </cms_page_save_after>
-            <new_order_mail_before_send>
+            <transactional_mail_send_before>
                 <observers>
                     <silex_cmsattachment>
                         <class>Silex_CmsAttachment_Model_Observer</class>
-                        <method>addPdfCmsPagesToMail</method>
+                        <method>addPdfCmsPagesToTransactionalMail</method>
                     </silex_cmsattachment>
                 </observers>
-            </new_order_mail_before_send>
+            </transactional_mail_send_before>
         </events>
     </global>
-
     <frontend>
         <routers>
             <cms>
@@ -61,22 +64,21 @@
         </routers>
         <layout>
             <updates>
-                <ccl_cms>
-                    <file>silex/cmsattachment.xml</file>
-                </ccl_cms>
+                <silex_cmsattachment>
+                    <file>silex/cms_attachment.xml</file>
+                </silex_cmsattachment>
             </updates>
         </layout>
         <translate>
             <modules>
-                <CCL_Cms>
+                <Silex_CmsAttachment>
                     <files>
                         <default>Silex_CmsAttachment.csv</default>
                     </files>
-                </CCL_Cms>
+                </Silex_CmsAttachment>
             </modules>
         </translate>
     </frontend>
-
     <admin>
         <routers>
             <adminhtml>
@@ -88,15 +90,14 @@
             </adminhtml>
         </routers>
     </admin>
-
     <adminhtml>
         <translate>
             <modules>
-                <CCL_Cms>
+                <Silex_CmsAttachment>
                     <files>
                         <default>Silex_CmsAttachment.csv</default>
                     </files>
-                </CCL_Cms>
+                </Silex_CmsAttachment>
             </modules>
         </translate>
     </adminhtml>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<layout>
+    <cms_page_print translate="label">
+        <block type="silex_cmsattachment/page" name="root" output="toHtml" template="silex/cms_attachment/page.phtml" />
+    </cms_page_print>
+</layout>

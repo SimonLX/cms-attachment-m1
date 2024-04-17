@@ -2,10 +2,28 @@
 
 /**
  * Class Silex_CmsAttachment_Block_Page
+ *
+ * Block class for CMS page print view
  */
 class Silex_CmsAttachment_Block_Page extends Mage_Core_Block_Template
 {
     /**
+     * Get page lang
+     *
+     * @return string
+     */
+    public function getLang()
+    {
+        if (!$this->hasData('lang')) {
+            $this->setData('lang', substr(Mage::app()->getLocale()->getLocaleCode(), 0, 2));
+        }
+
+        return $this->getData('lang');
+    }
+
+    /**
+     * Get page title
+     *
      * @return string
      */
     public function getPageTitle()
@@ -21,6 +39,8 @@ class Silex_CmsAttachment_Block_Page extends Mage_Core_Block_Template
     }
 
     /**
+     * Get page heading
+     *
      * @return string
      */
     public function getPageHeading()
@@ -36,6 +56,8 @@ class Silex_CmsAttachment_Block_Page extends Mage_Core_Block_Template
     }
 
     /**
+     * Get page content
+     *
      * @return string
      */
     public function getPageContent()
@@ -49,4 +71,4 @@ class Silex_CmsAttachment_Block_Page extends Mage_Core_Block_Template
 
         return $content;
     }
-} 
+}

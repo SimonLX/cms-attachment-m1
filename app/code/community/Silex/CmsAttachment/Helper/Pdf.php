@@ -1,12 +1,21 @@
 <?php
 
+require_once(Mage::getBaseDir() . DS . 'lib' . DS . 'Mpdf' . DS . 'mpdf.php');
+
 /**
  * Class Silex_CmsAttachment_Helper_Pdf
+ *
+ * Helper containing PDF-related methods
  */
 class Silex_CmsAttachment_Helper_Pdf extends Mage_Core_Helper_Abstract
 {
     protected $_path = '';
 
+    /**
+     * Silex_CmsAttachment_Helper_Pdf constructor
+     *
+     * @return void
+     */
     public function __construct()
     {
         $this->_path = Mage::getBaseDir('media') . DS . 'cms_pages';
@@ -15,9 +24,9 @@ class Silex_CmsAttachment_Helper_Pdf extends Mage_Core_Helper_Abstract
     /**
      * Returns the path to PDF file for given page ID
      *
-     * @param int|string $pageId ID/code of the page
+     * @param int|string $pageId
      *
-     * @return string Path of the file
+     * @return string
      */
     public function getPathToPdf($pageId)
     {
@@ -36,9 +45,9 @@ class Silex_CmsAttachment_Helper_Pdf extends Mage_Core_Helper_Abstract
     /**
      * Check the PDF file saved in server for the CMS page
      *
-     * @param int|string $pageId ID/code of the page
+     * @param int|string $pageId
      *
-     * @return false|mixed
+     * @return bool
      */
     public function checkCmsPagePdf($pageId)
     {
@@ -55,10 +64,10 @@ class Silex_CmsAttachment_Helper_Pdf extends Mage_Core_Helper_Abstract
     /**
      * Return the PDF file saved in server for the CMS page
      *
-     * @param int|string  $pageId            ID/code of the page
-     * @param bool        $createIfNotExists if true, create PDF file if it exists not
+     * @param int|string  $pageId
+     * @param bool        $createIfNotExists
      *
-     * @return false|mixed
+     * @return string|false
      */
     public function getCmsPagePdf($pageId, $createIfNotExists = false)
     {
@@ -80,8 +89,10 @@ class Silex_CmsAttachment_Helper_Pdf extends Mage_Core_Helper_Abstract
     /**
      * Save the CMS page content as PDF file in server (media/cms_pages/identifier.pdf)
      *
-     * @param int|string  $pageId      ID/code of the page
-     * @param string|bool $htmlContent HTML content to be saved as PDF. If false, default content generation apply
+     * @param int|string  $pageId
+     * @param string|bool $htmlContent
+     *
+     * @return void
      */
     public function saveCmsPagePdf($pageId, $htmlContent = false)
     {
@@ -91,7 +102,7 @@ class Silex_CmsAttachment_Helper_Pdf extends Mage_Core_Helper_Abstract
         if ($page->getId()) {
             if ($htmlContent === false) {
                 $htmlContent = Mage::app()->getLayout()->createBlock('silex_cmsattachment/page')
-                    ->setTemplate('silex/cmsattachment/page.phtml')
+                    ->setTemplate('silex/cms_attachment/page.phtml')
                     ->setPage($page)
                     ->toHtml();
             }

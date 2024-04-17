@@ -2,9 +2,24 @@
 
 /**
  * Class Silex_CmsAttachment_Adminhtml_Cms_PageController
+ *
+ * Controller for print CMS pages action
  */
 class Silex_CmsAttachment_Adminhtml_Cms_PageController extends Mage_Adminhtml_Controller_Action
 {
+    /**
+     * @inheritDoc
+     */
+    protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('cms/page/print');
+    }
+
+    /**
+     * Print CMS page
+     *
+     * @return void
+     */
     public function printAction()
     {
         $pageId = $this->getRequest()->getParam('page_id', $this->getRequest()->getParam('id', false));
@@ -39,8 +54,8 @@ class Silex_CmsAttachment_Adminhtml_Cms_PageController extends Mage_Adminhtml_Co
             $response->sendResponse();
         } else {
             Mage::getSingleton('adminhtml/session')->addError(Mage::helper('cms')->__('This page no longer exists.'));
+
             $this->_redirect('*/*/');
-            return;
         }
     }
 }

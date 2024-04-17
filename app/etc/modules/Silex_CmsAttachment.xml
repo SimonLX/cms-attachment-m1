@@ -4,6 +4,9 @@
         <Silex_CmsAttachment>
             <active>true</active>
             <codePool>community</codePool>
+            <depends>
+                <Silex_EmailExtensions/>
+            </depends>
         </Silex_CmsAttachment>
     </modules>
 </config>

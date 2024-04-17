@@ -4,6 +4,8 @@ require_once 'Mage/Cms/controllers/PageController.php';
 
 /**
  * Class Silex_CmsAttachment_PageController
+ *
+ * Overridden to add print action on CMS page controller
  */
 class Silex_CmsAttachment_PageController extends Mage_Cms_PageController
 {

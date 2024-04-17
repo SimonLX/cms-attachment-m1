@@ -1,0 +1,18 @@
+{
+    "name": "simonlx/cms-attachment-m1",
+    "description": "OrganicInternet_SimpleConfigurableProducts extensions for custom options",
+    "type": "magento-module",
+    "license": "GPL-3.0",
+    "version": "2.3.0",
+    "authors":[
+        {
+            "name":"Simon Laubet-Xavier",
+            "email":"simon.laubetxavier@home-made.io"
+        }
+    ],
+    "homepage": "https://github.com/SimonLX/cms-attachment-m1",
+    "require": {
+        "mpdf/mpdf": "7.0",
+        "simonlx/email-extensions-m1": "^1.0.0"
+    }
+}

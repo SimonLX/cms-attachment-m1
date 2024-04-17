@@ -1,0 +1,6 @@
+app/code/community/Silex/CmsAttachment/                          app/code/community/Silex/CmsAttachment/
+app/design/frontend/base/default/layout/silex/cms_attachment.xml app/design/frontend/base/default/layout/silex/cms_attachment.xml
+app/design/frontend/base/default/template/silex/cms_attachment/  app/design/frontend/base/default/template/silex/cms_attachment/
+app/etc/modules/Silex_CmsAttachments.xml                         app/etc/modules/Silex_CmsAttachment.xml
+app/locale/en_US/Silex_CmsAttachments.csv                        app/locale/en_US/Silex_CmsAttachments.csv
+app/locale/fr_FR/Silex_CmsAttachments.csv                        app/locale/fr_FR/Silex_CmsAttachments.csv
