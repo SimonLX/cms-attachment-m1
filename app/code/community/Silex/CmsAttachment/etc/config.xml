@@ -1,7 +1,7 @@
 <config>
     <modules>
         <Silex_CmsAttachment>
-            <version>1.3.0</version>
+            <version>1.3.2</version>
         </Silex_CmsAttachment>
     </modules>
     <global>
