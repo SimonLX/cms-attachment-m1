@@ -1,7 +1,7 @@
 <config>
     <modules>
         <Silex_CmsAttachment>
-            <version>1.3.2</version>
+            <version>1.4.0</version>
         </Silex_CmsAttachment>
     </modules>
     <global>
@@ -9,11 +9,6 @@
             <silex_cmsattachment>
                 <class>Silex_CmsAttachment_Block</class>
             </silex_cmsattachment>
-            <adminhtml>
-                <rewrite>
-                    <cms_page_edit>Silex_CmsAttachment_Block_Adminhtml_Cms_Page_Edit</cms_page_edit>
-                </rewrite>
-            </adminhtml>
         </blocks>
         <helpers>
             <silex_cmsattachment>
@@ -29,7 +24,7 @@
             <cms_page_delete_after>
                 <observers>
                     <silex_cmsattachment>
-                        <class>Silex_CmsAttachment_Model_Observer</class>
+                        <class>silex_cmsattachment/observer</class>
                         <method>deleteSavedPdfFile</method>
                     </silex_cmsattachment>
                 </observers>
@@ -37,7 +32,7 @@
             <cms_page_save_after>
                 <observers>
                     <silex_cmsattachment>
-                        <class>Silex_CmsAttachment_Model_Observer</class>
+                        <class>silex_cmsattachment/observer</class>
                         <method>deleteSavedPdfFile</method>
                     </silex_cmsattachment>
                 </observers>
@@ -45,7 +40,7 @@
             <transactional_mail_send_before>
                 <observers>
                     <silex_cmsattachment>
-                        <class>Silex_CmsAttachment_Model_Observer</class>
+                        <class>silex_cmsattachment/observer</class>
                         <method>addPdfCmsPagesToTransactionalMail</method>
                     </silex_cmsattachment>
                 </observers>
@@ -91,6 +86,16 @@
         </routers>
     </admin>
     <adminhtml>
+        <events>
+            <adminhtml_block_html_before>
+                <observers>
+                    <add_print_page_button>
+                        <class>silex_cmsattachment/observer</class>
+                        <method>addPrintPageButton</method>
+                    </add_print_page_button>
+                </observers>
+            </adminhtml_block_html_before>
+        </events>
         <translate>
             <modules>
                 <Silex_CmsAttachment>

@@ -10,7 +10,7 @@
                                 <children>
                                     <print translate="title">
                                         <title>Print the page</title>
-                                        <sort_order>10</sort_order>
+                                        <sort_order>20</sort_order>
                                     </print>
                                 </children>
                             </page>

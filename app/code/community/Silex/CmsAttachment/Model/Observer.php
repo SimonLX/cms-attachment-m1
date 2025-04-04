@@ -85,6 +85,48 @@ class Silex_CmsAttachment_Model_Observer
     }
 
     /**
+     * Add print page button on edit page form
+     *
+     * @param Varien_Event $observer
+     *
+     * @return void
+     */
+    public function addPrintPageButton($observer)
+    {
+        /** @var Mage_Adminhtml_Block_Template $block */
+        $block = $observer->getBlock();
+        $type = $block->getType();
+
+        if ($type === 'adminhtml/cms_page_edit') {
+            /** @var Mage_Adminhtml_Block_Cms_Page_Edit $block */
+            if (Mage::getSingleton('admin/session')->isAllowed('cms/page/print')) {
+                $block->addButton(
+                    'print',
+                    array(
+                        'label'   => Mage::helper('silex_cmsattachment')->__('Print'),
+                        'onclick' => 'setLocation(\'' . $this->getPrintUrl() . '\')'
+                    )
+                );
+            } else {
+                $block->removeButton('print');
+            }
+        }
+    }
+
+    /**
+     * Getter of url for "Print" button
+     *
+     * @return string
+     */
+    protected function getPrintUrl()
+    {
+        return Mage::getModel('adminhtml/url')->getUrl(
+            '*/*/print',
+            array('id' => Mage::registry('cms_page')->getId())
+        );
+    }
+
+    /**
      * Get correct config path part from event type
      *
      * @param string $eventType
